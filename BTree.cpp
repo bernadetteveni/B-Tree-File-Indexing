@@ -97,6 +97,7 @@ void BTree::insertRoot(Data x){
     p = root;
     i = 0;
 }
+
 void BTree::insert(Data x, BTreeNode* q){
     if(debug){
         cout << "called insert with " << x.id << " " << q->page[0].value.id << endl;
@@ -209,6 +210,7 @@ bool BTree::splitRoot(){
     root -> page [1].next = q2;
     return true;
 }
+
 bool BTree::splitChild(BTreeNode* q1, int k){
     if(debug)
         cout << "splitting child" << endl;
